@@ -61,10 +61,10 @@ int totalDays(int Y, int M)
 		else
 			totdays += 365;
 	}
-	for (m = 0; m <= M - 1; m++)//그 전달까지의 날 수를 계산계산
+	for (m = 0; m < M - 1; m++)//그 전달까지의 날 수를 계산계산
 	{
-		totdays += months[m+1];
-		if ((yearCheck(Y) == 1) && M <= 3)
+		totdays += months[m];
+		if ((yearCheck(Y) == 1) && M >= 3)
 			++totdays;
 	}
 	return totdays;
